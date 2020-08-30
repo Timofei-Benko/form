@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Timofei Benko">
+        <title>User Data</title>
+    </head>
+
+    <body>
+        <form action="submit" method="post">
+            <p>
+                <label for="fullName">Full name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe" maxlength="100" required>
+            </p>
+
+            <p>
+                <label for="telNo">Phone number: +375</label>
+                <input type="tel" id="telNo" name="telNo" pattern="[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{3}" 
+                placeholder="xx-xxx-xx-xx" size="11" minlength="12" maxlength="12" required><br>
+            </p>
+            
+            <p>
+                <label for="emailAddress">Email:</label>
+                <input type="email" id="emailAddress" name="emailAddress" placeholder="example@example.com"
+                size="23" minlength="5" maxlength="100" required>
+            </p>
+
+            <p>
+                <label for="password">Password:</label>
+                <input id="password" name="password" type="password"  minlength="8" maxlength="100" required><br>
+            </p>
+
+            <p>Are you over 18 years old?</p>
+            <label for="questionAgeNay">No</label>
+            <input id="questionAgeNay" name="questionAgeNay" value="No" type="radio" required> 
+            <label for="questionAgeYea">Yes</label>
+            <input id="questionAgeYea" name="questionAgeYea" value="Yes" type="radio" required>
+        
+            <p>Please, select your preferred contact method:</p>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" value="Phone" type="radio" required> 
+            <label for="email">Email</label>
+            <input id="email" name="email" value="Email" type="radio" required>
+            
+            <p><label for="comments">Leave your comments down below:</label></p>
+            <textarea id="comments" name="comments" rows="5" cols="33" maxlength="750" 
+            placeholder="What are your thoughts?" spellcheck="true" wrap="hard" required></textarea>
+            
+            <p>
+                <input type="submit" value="Send us your information">
+                <input type="reset" value="Reset">
+            </p>
+
+        </form>
+    </body>
